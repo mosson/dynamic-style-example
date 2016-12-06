@@ -1,5 +1,6 @@
 'use strict';
 
+import Promise from 'bluebird';
 import { StyleSheet, css } from 'aphrodite';
 
 function main(name, style) {
@@ -20,3 +21,17 @@ main('test', {
 main('test2', {
   backgroundColor: 'yellow'
 });
+
+pseudoLoadStyle().then((styleSource) => {
+  main('async', JSON.parse(styleSource));
+});
+
+function pseudoLoadStyle(){
+  return new Promise((fulfill, reject) => {
+    setTimeout(() => {
+      fulfill(JSON.stringify({
+        backgroundColor: 'blue'
+      }));
+    }, 2000);
+  });
+}
