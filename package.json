@@ -1,0 +1,21 @@
+{
+  "name": "dynamic-style",
+  "version": "0.0.1",
+  "description": "dynamic stylesheet insert",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify -e index.js -o serve/index.js -t [ babelify --presets [ es2015 ] ] ",
+    "serve": "node serve.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mosson",
+  "license": "MIT",
+  "dependencies": {
+    "aphrodite": "^1.1.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "connect": "^3.5.0",
+    "serve-static": "^1.11.1"
+  }
+}
