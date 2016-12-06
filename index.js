@@ -4,9 +4,7 @@ import { StyleSheet, css } from 'aphrodite';
 
 function main(name, style) {
   const styles = StyleSheet.create({
-    [name]: {
-        backgroundColor: 'red'
-    }
+    [name]: style
   });
 
   const div = document.createElement('div');
@@ -18,4 +16,7 @@ function main(name, style) {
 
 main('test', {
   backgroundColor: 'red'
-})
+});
+main('test2', {
+  backgroundColor: 'yellow'
+});

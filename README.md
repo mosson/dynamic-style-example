@@ -5,5 +5,5 @@ $ npm i
 
 $ npm run build
 
-$ npm run serve # then 8000
+$ npm run serve # then 8080
 ```
